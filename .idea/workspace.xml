@@ -17228,7 +17228,7 @@
       <updated>1575035958338</updated>
       <workItem from="1575035983982" duration="12377000" />
       <workItem from="1575124285109" duration="10441000" />
-      <workItem from="1575716284942" duration="1820000" />
+      <workItem from="1575716284942" duration="2269000" />
     </task>
     <task id="LOCAL-00001" summary="百度翻译前端">
       <created>1575719440364</created>
@@ -17248,10 +17248,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="百度翻译前端" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="276" y="0" key="CommitChangelistDialog2" timestamp="1575719438333">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1575734995322">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="276" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1575719438333" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1575734995322" />
     <state width="1308" height="31" key="GridCell.Tab.0.bottom" timestamp="1575180391864">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
