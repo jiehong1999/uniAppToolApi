@@ -117,6 +117,7 @@
                     url: 'http://47.98.241.180:8089/fanYiApi', //仅为示例，并非真实接口地址。
                     data:p,
                     method:'POST',
+                    timeout:6000,
                     header: {
                         'Content-type': 'application/json',
                         'Content-type':'application/x-www-form-urlencoded'
@@ -124,15 +125,19 @@
                     dataType:'json',
                     success: (res) => {
                         console.log(res.data);
-
-                        var val="<div>{<br/>";
-                        for(var key in res.data){
-                           val+='"'+key+'":"'+res.data[key]+'",<br/>';
+                        if(res.data){
+                            var val="<div>{<br/>";
+                            for(var key in res.data){
+                                val+='"'+key+'":"'+res.data[key]+'",<br/>';
+                            }
+                            // val=val.substring(0,val.lastIndexOf(','));
+                            val+="<br/>}</div>";
+                            console.log(val);
+                            this.getVal =val;
+                        }else{
+                            this.getVal ="系统错误";
                         }
-                        val=val.substring(0,val.lastIndexOf(','));
-                        val+="<br/>}</div>";
-                        console.log(val);
-                        this.getVal =val;
+
                     }
                 });
             }

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6ad4552c-f467-448c-9f13-f6e3acadc61a" name="Default Changelist" comment="" />
+    <list default="true" id="6ad4552c-f467-448c-9f13-f6e3acadc61a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fanYi/fanYi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/fanYi/fanYi.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -99,7 +103,7 @@
       <updated>1575035958338</updated>
       <workItem from="1575035983982" duration="12377000" />
       <workItem from="1575124285109" duration="10441000" />
-      <workItem from="1575716284942" duration="2935000" />
+      <workItem from="1575716284942" duration="3773000" />
     </task>
     <task id="LOCAL-00001" summary="百度翻译前端">
       <created>1575719440364</created>
@@ -108,7 +112,21 @@
       <option name="project" value="LOCAL" />
       <updated>1575719440364</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="百度翻译前端">
+      <created>1575736085706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1575736085706</updated>
+    </task>
+    <task id="LOCAL-00003" summary="百度翻译前端">
+      <created>1575736169984</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1575736169984</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -119,10 +137,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="百度翻译前端" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1575736082722">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1575736166531">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1575736082722" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1575736166531" />
     <state width="1308" height="31" key="GridCell.Tab.0.bottom" timestamp="1575180391864">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
@@ -139,13 +157,17 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state width="1308" height="31" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1575180391864" />
-    <state x="258" y="130" width="816" height="520" key="Vcs.Push.Dialog.v2" timestamp="1575735938949">
+    <state x="258" y="130" width="816" height="520" key="Vcs.Push.Dialog.v2" timestamp="1575736288505">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="258" y="130" width="816" height="520" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1575735938949" />
+    <state x="258" y="130" width="816" height="520" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1575736288505" />
     <state x="462" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575735982553">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="462" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1575735982553" />
+    <state x="334" y="148" width="455" height="424" key="git4idea.merge.GitMergeDialog" timestamp="1575736279364">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="334" y="148" width="455" height="424" key="git4idea.merge.GitMergeDialog/0.0.1366.768@0.0.1366.768" timestamp="1575736279364" />
   </component>
 </project>
