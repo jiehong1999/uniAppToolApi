@@ -1,7 +1,12 @@
 <template>
     <view class="fanyi" @click="clean">
+        <view class="topNav">
+            <view class="NavButton actionButton">String</view>
+            <view class="NavButton" @click="goMap">Map单选</view>
+            <view class="NavButton" @click="goSelection">Map多选</view>
+        </view>
         <view class="setVal">
-            <textarea placeholder-style="color:#dadada" maxlength="-1" placeholder="Map数据" @blur="resApi" v-model="setVal"/>
+            <textarea placeholder-style="color:#dadada" maxlength="-1" placeholder="String数据" @blur="resApi" v-model="setVal"/>
             <view class="select1" v-if="show1">
                 <view class="selectVal"  v-for="(item,index) in langList" :key="index" @click.stop="tabLangs1(item,index)">
                     {{item.name}}
@@ -34,7 +39,6 @@
 
 <script>
     export default {
-        name: "fanYi",
         data(){
             return{
                 langList:[
@@ -80,21 +84,24 @@
         onShow(){
             this.from=this.langList[this.Langindex1].uid;
             this.to=this.langList[this.Langindex2].uid;
-            this.setVal='{"我": "我"}';
+            this.setVal="我爱你";
             console.log(this.from);
             console.log(this.to);
         },
         methods:{
+            //关闭下拉选项
             clean(){
                 this.show1=false;
                  this.show2=false;
             },
+            //第一个下拉选项点击触发函数
             tabLangs1(val,index){
                 this.Langindex1=index;
                 this.show1=false;
                 this.from=val.uid;
                 console.log(this.from);
             },
+            //第二个下拉选项点击触发函数
             tabLangs2(val,index){
                 this.Langindex2=index;
                 this.show2=false;
@@ -107,40 +114,62 @@
                     this.resApi();
                 }
             },
+            //请求API函数
             resApi(){
+                uni.showToast({title:'功能暂未开放',icon:"none"});
+                return;
                 if(!this.setVal||this.setVal==""){
                     console.log("没有翻译内容")
                     return;
                 }
                 var p={val:this.setVal, from:this.from, to:this.to};
                 uni.request({
-                    url: 'http://47.98.241.180:8089/fanYiApi', //仅为示例，并非真实接口地址。
+                    url: 'http://47.98.241.180:8089/fanYiApiString',
                     data:p,
                     method:'POST',
+
                     header: {
                         'Content-type': 'application/json',
                         'Content-type':'application/x-www-form-urlencoded'
                     },
                     dataType:'json',
                     success: (res) => {
-                        console.log(res.data);
-
-                        var val="<div>{<br/>";
-                        for(var key in res.data){
-                           val+='"'+key+'":"'+res.data[key]+'",<br/>';
+                        if(res.data){
+                            this.getVal =res.data;
+                        }else{
+                            uni.showToast({title:'系统错误',icon:"none"})
                         }
-                        val=val.substring(0,val.lastIndexOf(','));
-                        val+="<br/>}</div>";
-                        console.log(val);
-                        this.getVal =val;
                     }
                 });
+            },
+            goMap(){
+                uni.navigateTo({url:"/pages/fanYi/fanyiMap"})
+            },
+            goSelection(){
+                uni.navigateTo({url:"/pages/fanYi/fanyiSelection"})
             }
         }
     }
 </script>
 
 <style scoped>
+    .topNav{
+        width:99%;
+        background: #fffff;
+    }
+    .NavButton{
+        width: 100px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 20px;
+        padding: 10px 1px;
+        display: inline-block;
+
+    }
+    .actionButton{
+        background: #4395ff;
+        color: #ffffff;
+    }
     .fanyi{
         width: 100%;
         background-color: #efefef;
@@ -163,7 +192,7 @@
         border: 1px #4395ff solid;
     }
     .getVal{
-        width: 39%;
+        width: 40%;
         background-color: #ffffff;
         border: 1px #4395ff solid;
         height: 600px;
@@ -216,8 +245,6 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        height: 690px;
-        overflow-y: auto;
     }
     .selectVal{
         text-align: center;

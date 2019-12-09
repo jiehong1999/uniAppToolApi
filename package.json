@@ -36,6 +36,8 @@
     "flyio": "^0.6.2",
     "regenerator-runtime": "^0.12.1",
     "vue": "^2.6.10",
+    "vue-resource": "^1.5.1",
+    "vue-router": "^3.1.3",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
