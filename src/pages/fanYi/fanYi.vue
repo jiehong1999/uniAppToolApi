@@ -155,7 +155,7 @@
 <style scoped>
     .topNav{
         width:99%;
-        background: #fffff;
+        background: #ffffff;
     }
     .NavButton{
         width: 100px;
