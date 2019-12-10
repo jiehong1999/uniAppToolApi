@@ -1,12 +1,12 @@
 <template>
     <view class="fanyi" @click="clean">
         <view class="topNav">
-            <view class="NavButton actionButton">String</view>
-            <view class="NavButton" @click="goMap">Map单选</view>
+            <view class="NavButton" @click="goString">String</view>
+            <view class="NavButton actionButton">Map单选</view>
             <view class="NavButton" @click="goSelection">Map多选</view>
         </view>
         <view class="setVal">
-            <textarea placeholder-style="color:#dadada" maxlength="-1" placeholder="String数据" @blur="resApi" v-model="setVal"/>
+            <textarea placeholder-style="color:#dadada" maxlength="-1" placeholder="Map数据" @blur="resApi" v-model="setVal"/>
             <view class="select1" v-if="show1">
                 <view class="selectVal"  v-for="(item,index) in langList" :key="index" @click.stop="tabLangs1(item,index)">
                     {{item.name}}
@@ -70,7 +70,7 @@
                     {uid:'hu',name:'匈牙利语'},
                     {uid:'cht',name:'繁体中文'},
                     {uid:'vie',name:'越南语'},
-                    ],
+                ],
                 Langindex1:0,
                 Langindex2:1,
                 show1:false,
@@ -84,24 +84,21 @@
         onShow(){
             this.from=this.langList[this.Langindex1].uid;
             this.to=this.langList[this.Langindex2].uid;
-            this.setVal="我爱你";
+            this.setVal='{"我": "我"}';
             console.log(this.from);
             console.log(this.to);
         },
         methods:{
-            //关闭下拉选项
             clean(){
                 this.show1=false;
-                 this.show2=false;
+                this.show2=false;
             },
-            //第一个下拉选项点击触发函数
             tabLangs1(val,index){
                 this.Langindex1=index;
                 this.show1=false;
                 this.from=val.uid;
                 console.log(this.from);
             },
-            //第二个下拉选项点击触发函数
             tabLangs2(val,index){
                 this.Langindex2=index;
                 this.show2=false;
@@ -114,17 +111,19 @@
                     this.resApi();
                 }
             },
-            //请求API函数
             resApi(){
-                uni.showToast({title:'功能暂未开放',icon:"none"});
-                return;
                 if(!this.setVal||this.setVal==""){
                     console.log("没有翻译内容")
                     return;
                 }
-                var p={val:this.setVal, from:this.from, to:this.to};
+                var sal=this.setVal;
+                if(sal.lastIndexOf("}")-1==sal.lastIndexOf(',')){
+                    sal=sal.substring(0,sal.lastIndexOf(','));
+                    sal=sal+"}";
+                }
+                var p={val:sal, from:this.from, to:this.to};
                 uni.request({
-                    url: 'http://47.98.241.180:8089/fanYiApiString',
+                    url: 'http://47.98.241.180:8089/fanYiApi',
                     data:p,
                     method:'POST',
 
@@ -134,16 +133,24 @@
                     },
                     dataType:'json',
                     success: (res) => {
-                        if(res.data){
-                            this.getVal =res.data;
+                        console.log(res.data);
+                        if(res.data!=null){
+                            var val="<div>{<br/>";
+                            for(var key in res.data){
+                                val+='"'+key+'":"'+res.data[key]+'",<br/>';
+                            }
+                            val+="<br/>}</div>";
+                            console.log(val);
+                            this.getVal =val;
                         }else{
-                            uni.showToast({title:'系统错误',icon:"none"})
+                            this.getVal ="系统错误";
                         }
+
                     }
                 });
             },
-            goMap(){
-                uni.navigateTo({url:"/pages/fanYi/fanyiMap"})
+            goString(){
+                uni.navigateTo({url:"/pages/fanYi/fanYi"})
             },
             goSelection(){
                 uni.navigateTo({url:"/pages/fanYi/fanyiSelection"})
@@ -153,6 +160,12 @@
 </script>
 
 <style scoped>
+    .fanyi{
+        width: 100%;
+        background-color: #efefef;
+        font-size: 15px;
+        overflow: hidden;
+    }
     .topNav{
         width:99%;
         background: #fffff;
@@ -169,12 +182,6 @@
     .actionButton{
         background: #4395ff;
         color: #ffffff;
-    }
-    .fanyi{
-        width: 100%;
-        background-color: #efefef;
-        font-size: 15px;
-        overflow: hidden;
     }
     .setVal{
         width: 39%;

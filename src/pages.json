@@ -1,9 +1,21 @@
 {
-	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+	"pages": [
 		{
 			"path": "pages/fanYi/fanYi",
 			"style": {
 				"navigationBarTitleText": "百度翻译"
+			}
+		},
+		{
+			"path": "pages/fanYi/fanyiMap",
+			"style": {
+				"navigationBarTitleText": "百度翻译Map"
+			}
+		},
+		{
+			"path": "pages/fanYi/fanyiSelection",
+			"style": {
+				"navigationBarTitleText": "百度翻译多选"
 			}
 		}
 	],
