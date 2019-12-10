@@ -1,28 +1,79 @@
 {
 	"pages": [
 		{
+			"path": "pages/computer/index",
+			"style": {
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#cf3a4a"
+					},
+					"animationDuration": 250
+				}
+			}
+		},
+		{
 			"path": "pages/fanYi/fanYi",
 			"style": {
-				"navigationBarTitleText": "百度翻译"
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#cf3a4a"
+					},
+					"animationDuration": 250
+				}
 			}
 		},
 		{
 			"path": "pages/fanYi/fanyiMap",
 			"style": {
-				"navigationBarTitleText": "百度翻译Map"
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#cf3a4a"
+					},
+					"animationDuration": 250
+				}
 			}
 		},
 		{
 			"path": "pages/fanYi/fanyiSelection",
 			"style": {
-				"navigationBarTitleText": "百度翻译多选"
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#cf3a4a"
+					},
+					"animationDuration": 250
+				}
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "百度翻译",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationStyle": "custom",
+		"navigationBarTextStyle": "white",
+		"backgroundColor": "#262627",
+		"backgroundColorTop": "#262627",
+		"backgroundColorBottom": "#fff",
+		"mp-alipay": {
+			"titleBarColor": "#FFFFFF"
+		}
+	},
+	"tabBar": {
+		"color": "#808080",
+		"selectedColor": "#f3594f",
+		"backgroundColor": "#ffffff",
+		"borderStyle": "black",
+		"list": [{
+				"pagePath": "pages/computer/index",
+				"iconPath": "",
+				"selectedIconPath": "",
+				"text": "Pc"
+			}
+		]
 	}
 }

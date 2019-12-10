@@ -12,6 +12,6 @@
 	}
 </script>
 
-<style>
-	/*每个页面公共css */
+<style type="text/css">
+    @import "styles/base.css";
 </style>
