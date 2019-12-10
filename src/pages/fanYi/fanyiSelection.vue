@@ -20,9 +20,16 @@
                 </view>
                 翻译==>
                 <view class="bLang" style="float: right" @click.stop="show2=!show2">
-                    {{langList[Langindex2].name}}
+                    <view v-if="cList.length<=0">
+                        请选择语言
+                    </view>
+                    <view v-for="(items,indexs) in langList" :key="indexs">
+                        <view v-for="(item,index) in cList" :key="index">
+                            {{items.uid==item?items.name:''}}
+                        </view>
+                    </view>
                 </view>
-                <view class="selectVal2Button" @click="goMap">确定</view>
+                <view class="selectVal2Button" @click="resApi">确定</view>
             </view>
         </view>
         <view class="getVal">
@@ -123,7 +130,7 @@
                     uni.showToast({title:'请选择翻译语言',icon:"none"});
                     return;
                 }
-                if(this.cList.length>=5){
+                if(this.cList.length>5){
                     uni.showToast({title:'最多翻译五种语言',icon:"none"});
                     return;
                 }
@@ -132,9 +139,9 @@
                     sal=sal.substring(0,sal.lastIndexOf(','));
                     sal=sal+"}";
                 }
-                var p={val:sal, from:this.from, to:this.to};
+                var p={val:sal, fromList:this.from, toList:this.cList};
                 uni.request({
-                    url: 'http://47.98.241.180:8089/fanYiApi',
+                    url: 'http://47.98.241.180:8089/fanYiApiSelection',
                     data:p,
                     method:'POST',
 
@@ -167,14 +174,18 @@
                 uni.navigateTo({url:"/pages/fanYi/fanyiMap"})
             },
             checkboxChange(e){
-                this.cList=e.detail.value;
+                if(e.detail.value.length<=5){
+                    this.cList=e.detail.value;
+                }else{
+                    uni.showToast({title:'最多翻译五种语言',icon:"none"});
+                }
                 console.log(this.cList);
             }
         }
     }
 </script>
 
-<style scoped>
+<style lang="less" type="text/less" scoped>
     .fanyi{
         width: 100%;
         background-color: #efefef;
@@ -183,7 +194,7 @@
     }
     .topNav{
         width:99%;
-        background: #fffff;
+        background: #ffffff;
     }
     .NavButton{
         width: 100px;
