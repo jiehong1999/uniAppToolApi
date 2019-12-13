@@ -139,12 +139,11 @@
                     sal=sal.substring(0,sal.lastIndexOf(','));
                     sal=sal+"}";
                 }
-                var p={val:sal, fromList:this.from, toList:this.cList};
+                var p={val:sal, form:this.from, toList:this.cList};
                 uni.request({
                     url: 'http://47.98.241.180:8089/fanYiApiSelection',
                     data:p,
                     method:'POST',
-
                     header: {
                         'Content-type': 'application/json',
                         'Content-type':'application/x-www-form-urlencoded'

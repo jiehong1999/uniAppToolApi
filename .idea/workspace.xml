@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ad4552c-f467-448c-9f13-f6e3acadc61a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/pages/Mycanvas/bezier.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/Mycanvas/canvas.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/computer/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/computer/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/pages/fanYi/fanYi.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/fanYi/fanYi.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/pages/fanYi/fanyiMap.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/fanYi/fanyiMap.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles/base.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/base.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pages/fanYi/fanyiSelection.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/pages/fanYi/fanyiSelection.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +130,7 @@
       <workItem from="1575875430228" duration="11006000" />
       <workItem from="1575940685883" duration="574000" />
       <workItem from="1575948062796" duration="3008000" />
-      <workItem from="1575959981352" duration="68645000" />
+      <workItem from="1575959981352" duration="71654000" />
     </task>
     <task id="LOCAL-00001" summary="百度翻译前端">
       <created>1575719440364</created>
@@ -165,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1575973049746</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="添加画布粒子 和曲线动画效果">
+      <created>1576227650741</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1576227650741</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,54 +192,57 @@
     <MESSAGE value="添加：单选翻译页面和多选翻译页面" />
     <MESSAGE value="合并：合并组分支代码到F1.0.0" />
     <MESSAGE value="添加画布" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加画布" />
+    <MESSAGE value="添加画布粒子 和曲线动画效果" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加画布粒子 和曲线动画效果" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="589" y="49" key="CommitChangelistDialog2" timestamp="1575973049397">
-      <screen x="0" y="23" width="1920" height="980" />
+    <state x="589" y="49" key="CommitChangelistDialog2" timestamp="1576227650424">
+      <screen x="0" y="23" width="1920" height="987" />
     </state>
     <state x="0" y="0" key="CommitChangelistDialog2/0.0.1366.768@0.0.1366.768" timestamp="1575948276846" />
     <state x="589" y="49" key="CommitChangelistDialog2/0.23.1920.980@0.23.1920.980" timestamp="1575973049397" />
     <state x="589" y="49" key="CommitChangelistDialog2/0.23.1920.981@0.23.1920.981" timestamp="1575961542334" />
+    <state x="589" y="49" key="CommitChangelistDialog2/0.23.1920.987@0.23.1920.987" timestamp="1576227650424" />
     <state x="721" y="326" key="EditFileWatcherDialog" timestamp="1575963464149">
       <screen x="0" y="23" width="1920" height="981" />
     </state>
     <state x="721" y="326" key="EditFileWatcherDialog/0.23.1920.981@0.23.1920.981" timestamp="1575963464149" />
-    <state width="1490" height="185" key="GridCell.Tab.0.bottom" timestamp="1576203594421">
+    <state width="1490" height="219" key="GridCell.Tab.0.bottom" timestamp="1576228251284">
       <screen x="0" y="23" width="1920" height="985" />
     </state>
     <state width="1308" height="31" key="GridCell.Tab.0.bottom/0.0.1366.768@0.0.1366.768" timestamp="1575948276846" />
     <state width="1490" height="249" key="GridCell.Tab.0.bottom/0.23.1920.980@0.23.1920.980" timestamp="1576028567243" />
-    <state width="1490" height="185" key="GridCell.Tab.0.bottom/0.23.1920.985@0.23.1920.985" timestamp="1576203594421" />
-    <state width="1490" height="185" key="GridCell.Tab.0.center" timestamp="1576203594420">
+    <state width="1490" height="219" key="GridCell.Tab.0.bottom/0.23.1920.985@0.23.1920.985" timestamp="1576228251284" />
+    <state width="1490" height="219" key="GridCell.Tab.0.center" timestamp="1576228251283">
       <screen x="0" y="23" width="1920" height="985" />
     </state>
     <state width="1308" height="31" key="GridCell.Tab.0.center/0.0.1366.768@0.0.1366.768" timestamp="1575948276846" />
     <state width="1490" height="249" key="GridCell.Tab.0.center/0.23.1920.980@0.23.1920.980" timestamp="1576028567241" />
-    <state width="1490" height="185" key="GridCell.Tab.0.center/0.23.1920.985@0.23.1920.985" timestamp="1576203594420" />
-    <state width="1490" height="185" key="GridCell.Tab.0.left" timestamp="1576203594420">
+    <state width="1490" height="219" key="GridCell.Tab.0.center/0.23.1920.985@0.23.1920.985" timestamp="1576228251283" />
+    <state width="1490" height="219" key="GridCell.Tab.0.left" timestamp="1576228251282">
       <screen x="0" y="23" width="1920" height="985" />
     </state>
     <state width="1308" height="31" key="GridCell.Tab.0.left/0.0.1366.768@0.0.1366.768" timestamp="1575948276846" />
     <state width="1490" height="249" key="GridCell.Tab.0.left/0.23.1920.980@0.23.1920.980" timestamp="1576028567241" />
-    <state width="1490" height="185" key="GridCell.Tab.0.left/0.23.1920.985@0.23.1920.985" timestamp="1576203594420" />
-    <state width="1490" height="185" key="GridCell.Tab.0.right" timestamp="1576203594421">
+    <state width="1490" height="219" key="GridCell.Tab.0.left/0.23.1920.985@0.23.1920.985" timestamp="1576228251282" />
+    <state width="1490" height="219" key="GridCell.Tab.0.right" timestamp="1576228251283">
       <screen x="0" y="23" width="1920" height="985" />
     </state>
     <state width="1308" height="31" key="GridCell.Tab.0.right/0.0.1366.768@0.0.1366.768" timestamp="1575948276846" />
     <state width="1490" height="249" key="GridCell.Tab.0.right/0.23.1920.980@0.23.1920.980" timestamp="1576028567242" />
-    <state width="1490" height="185" key="GridCell.Tab.0.right/0.23.1920.985@0.23.1920.985" timestamp="1576203594421" />
+    <state width="1490" height="219" key="GridCell.Tab.0.right/0.23.1920.985@0.23.1920.985" timestamp="1576228251283" />
     <state x="617" y="170" key="SettingsEditor" timestamp="1575964073676">
       <screen x="0" y="23" width="1920" height="980" />
     </state>
     <state x="617" y="170" key="SettingsEditor/0.23.1920.980@0.23.1920.980" timestamp="1575964073676" />
     <state x="617" y="170" key="SettingsEditor/0.23.1920.981@0.23.1920.981" timestamp="1575963465460" />
-    <state x="382" y="151" width="816" height="520" key="Vcs.Push.Dialog.v2" timestamp="1575973066407">
-      <screen x="0" y="23" width="1920" height="980" />
+    <state x="382" y="152" width="816" height="520" key="Vcs.Push.Dialog.v2" timestamp="1576227676027">
+      <screen x="0" y="23" width="1920" height="987" />
     </state>
     <state x="258" y="130" width="816" height="520" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1575948276846" />
     <state x="382" y="151" key="Vcs.Push.Dialog.v2/0.23.1920.980@0.23.1920.980" timestamp="1575973066407" />
     <state x="382" y="151" key="Vcs.Push.Dialog.v2/0.23.1920.981@0.23.1920.981" timestamp="1575961618080" />
+    <state x="382" y="152" key="Vcs.Push.Dialog.v2/0.23.1920.987@0.23.1920.987" timestamp="1576227676027" />
     <state x="462" y="308" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1575961560706">
       <screen x="0" y="23" width="1920" height="981" />
     </state>

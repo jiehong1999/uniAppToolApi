@@ -123,7 +123,8 @@
                 }
                 var p={val:sal, from:this.from, to:this.to};
                 uni.request({
-                    url:'http://47.98.241.180:8089/fanYiApiMap',
+                    // url:'http://47.98.241.180:8089/fanYiApiMap',
+                    url:'http://192.168.8.14:8089/fanYiApiMap',
                     data:p,
                     method:'POST',
                     header: {
