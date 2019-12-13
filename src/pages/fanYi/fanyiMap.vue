@@ -123,10 +123,9 @@
                 }
                 var p={val:sal, from:this.from, to:this.to};
                 uni.request({
-                    url: 'http://47.98.241.180:8089/fanYiApi',
+                    url:'http://47.98.241.180:8089/fanYiApiMap',
                     data:p,
                     method:'POST',
-
                     header: {
                         'Content-type': 'application/json',
                         'Content-type':'application/x-www-form-urlencoded'
@@ -134,17 +133,19 @@
                     dataType:'json',
                     success: (res) => {
                         console.log(res.data);
-                        if(res.data!=null){
+                        if(res.data.code==0){
                             var val="<div>{<br/>";
-                            for(var key in res.data){
-                                val+='"'+key+'":"'+res.data[key]+'",<br/>';
+                            for(var key in res.data.data){
+                                val+='"'+key+'":"'+res.data.data[key]+'",<br/>';
                             }
                             val+="<br/>}</div>";
                             console.log(val);
                             this.getVal =val;
                         }else{
-                            this.getVal ="系统错误";
+                            uni.showToast({title:res.data.msg,icon:"none"})
                         }
+
+
 
                     }
                 });

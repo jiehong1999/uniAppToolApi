@@ -51,6 +51,32 @@
 					"animationDuration": 250
 				}
 			}
+		},
+		{
+			"path": "pages/Mycanvas/canvas",
+			"style": {
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#cf3a4a"
+					},
+					"animationDuration": 250
+				}
+			}
+		},
+		{
+			"path": "pages/Mycanvas/bezier",
+			"style": {
+				"enablePullDownRefresh": true,
+				"app-plus": {
+					"pullToRefresh": {
+						"support": true,
+						"color": "#cf3a4a"
+					},
+					"animationDuration": 250
+				}
+			}
 		}
 	],
 	"globalStyle": {

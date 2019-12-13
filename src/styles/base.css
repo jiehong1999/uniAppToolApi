@@ -1,3 +1,17 @@
 uni-page-body{
     height:100%;
 }
+.sp-bw {
+    display: flex;
+    justify-content: space-between;
+}
+
+.jt-ct {
+    display: flex;
+    justify-content: center;
+}
+
+.ag-ct {
+    display: flex;
+    align-items: center;
+}

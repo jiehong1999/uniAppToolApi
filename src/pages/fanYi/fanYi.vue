@@ -1,6 +1,7 @@
 <template>
     <view class="fanyi" @click="clean">
         <view class="topNav">
+            <view class="NavButton" @click="gohome">首页</view>
             <view class="NavButton actionButton">String</view>
             <view class="NavButton" @click="goMap">Map单选</view>
             <view class="NavButton" @click="goSelection">Map多选</view>
@@ -116,28 +117,25 @@
             },
             //请求API函数
             resApi(){
-                uni.showToast({title:'功能暂未开放',icon:"none"});
-                return;
                 if(!this.setVal||this.setVal==""){
                     console.log("没有翻译内容")
                     return;
                 }
                 var p={val:this.setVal, from:this.from, to:this.to};
                 uni.request({
-                    url: 'http://47.98.241.180:8089/fanYiApiString',
+                    url: 'http://47.98.241.180:8089/fanYiApi',
                     data:p,
                     method:'POST',
-
                     header: {
                         'Content-type': 'application/json',
                         'Content-type':'application/x-www-form-urlencoded'
                     },
                     dataType:'json',
                     success: (res) => {
-                        if(res.data){
-                            this.getVal =res.data;
+                        if(res.data.code==0){
+                            this.getVal =res.data.data;
                         }else{
-                            uni.showToast({title:'系统错误',icon:"none"})
+                            uni.showToast({title:res.data.msg,icon:"none"})
                         }
                     }
                 });
@@ -147,6 +145,9 @@
             },
             goSelection(){
                 uni.navigateTo({url:"/pages/fanYi/fanyiSelection"})
+            },
+            gohome(){
+                uni.switchTab({url:"/pages/computer/index"})
             }
         }
     }
@@ -177,7 +178,7 @@
         overflow: hidden;
     }
     .setVal{
-        width: 39%;
+        width: 40%;
         background-color: #ffffff;
         border: 1px #4395ff solid;
         min-height: 600px;
@@ -192,7 +193,7 @@
         border: 1px #4395ff solid;
     }
     .getVal{
-        width: 40%;
+        width:39%;
         background-color: #ffffff;
         border: 1px #4395ff solid;
         height: 600px;

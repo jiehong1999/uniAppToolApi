@@ -10,9 +10,6 @@
                 </view>
             </view>
         </view>
-        <view class="cover" :style="'height:'+bHeight+'px'">
-            <canvas style="width:100%;height:100%;" canvas-id="firstCanvas"></canvas>
-        </view>
     </view>
 </template>
 
@@ -22,15 +19,12 @@
             return {
                 groupLis:[
                     {title:"翻译",url:"/pages/fanYi/fanYi",img:"../../static/img/index/Live2D.png"},
-                    {title:"翻译",url:"/pages/fanYi/fanYi",img:"../../static/img/index/Live2D.png"},
+                    {title:"画布工厂",url:"/pages/Mycanvas/canvas",img:"../../static/img/index/Live2D.png"},
                 ],
-                bHeight:document.body.scrollHeight-173,
             }
         },
         onShow() {
-        },
-        onReady(){
-            var context = uni.createCanvasContext('firstCanvas');
+
         },
         methods: {
             go(url){
@@ -76,10 +70,5 @@
     .icon img{
         width: 100%;
         height: 100%;
-    }
-    .cover{
-        height: 100%;
-        width: 100%;
-        background: #333333;
     }
 </style>
